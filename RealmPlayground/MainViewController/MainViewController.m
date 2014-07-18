@@ -8,6 +8,29 @@
 
 #import "MainViewController.h"
 
+#import <objc/runtime.h>
+
+@implementation UISearchBar (RAC)
+
+-(RACSignal*) rac_textSignal {
+    
+    self.delegate = (id<UISearchBarDelegate>)self;
+    RACSignal *signal = objc_getAssociatedObject(self, _cmd);
+    
+    if (signal != nil) return signal;
+    
+    signal = [[self rac_signalForSelector:@selector(searchBar:textDidChange:)
+                             fromProtocol:@protocol(UISearchBarDelegate)] map:^id(RACTuple *tuple) {
+        return tuple.second;
+    }];
+    
+    objc_setAssociatedObject(self, _cmd, signal, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    return signal;
+    
+}
+
+@end
+
 @interface MainViewController ()
 
 @end
@@ -33,6 +56,32 @@
     
 }
 
+-(void) setupMainSearchBar {
+    
+    [[self.mainSearchBar rac_textSignal] subscribeNext:^(NSString* text) {
+        
+        self.searchFilterString = text;
+        
+    }];
+    
+    [RACObserve(self, searchFilterString) subscribeNext:^(id x) {
+        
+        [self.mainTableView reloadData];
+        
+    }];
+    
+}
+
+#pragma mark - ibaction
+
+-(IBAction) tabScreenAction : (id) sender {
+    
+    if ([self.mainSearchBar isFirstResponder]) {
+        [self.mainSearchBar resignFirstResponder];
+    }
+    
+}
+
 #pragma mark - life cycle
 
 -(void) viewDidLoad {
@@ -43,7 +92,14 @@
     [self.mainTableView registerClass:[MainCell class] forCellReuseIdentifier:@"MainCell"];
     
     [self setupNavigationRightButton];
+    [self setupMainSearchBar];
     
+}
+
+-(void) viewWillAppear : (BOOL) animated {
+    [super viewWillAppear:animated];
+    
+    [self.mainTableView reloadData];
 }
 
 @end

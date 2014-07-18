@@ -72,6 +72,19 @@
     
 }
 
++(RLMArray*) dataSourceFilter : (NSString*) filterString {
+    
+    if (filterString) {
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"firstNameString contains[c] %@", filterString];
+        return [AddressBook objectsWithPredicate:predicate];
+        
+    } else {
+        return [AddressBook allObjects];
+    }
+    
+}
+
 #pragma mark - private
 
 +(RLMRealm*) realm {

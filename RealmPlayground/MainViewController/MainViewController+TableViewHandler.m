@@ -14,13 +14,13 @@
 
 -(NSInteger) tableView : (UITableView*) tableView numberOfRowsInSection : (NSInteger) section {
     
-    return [[RealmInterface dataSource] count];
+    return [[RealmInterface dataSourceFilter:self.searchFilterString] count];
     
 }
 
 -(UITableViewCell*) tableView : (UITableView*) tableView cellForRowAtIndexPath : (NSIndexPath*) indexPath {
     
-    AddressBook *eachData = [[RealmInterface dataSource] objectAtIndex:indexPath.row];
+    AddressBook *eachData = [[RealmInterface dataSourceFilter:self.searchFilterString] objectAtIndex:indexPath.row];
     
     MainCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MainCell" forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;

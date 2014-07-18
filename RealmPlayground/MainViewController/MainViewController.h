@@ -13,6 +13,9 @@
 
 @interface MainViewController : UIViewController
 
+@property (nonatomic, strong) NSString *searchFilterString;
+
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
+@property (weak, nonatomic) IBOutlet UISearchBar *mainSearchBar;
 
 @end

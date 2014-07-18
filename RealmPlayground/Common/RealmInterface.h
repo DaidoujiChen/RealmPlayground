@@ -20,6 +20,7 @@
               withAddress : (NSString*) addressString
                  withNote : (NSString*) noteString;
 
-+(NSArray*) dataSource;
++(RLMArray*) dataSourceFilter : (NSString*) filterString;
+
 
 @end
