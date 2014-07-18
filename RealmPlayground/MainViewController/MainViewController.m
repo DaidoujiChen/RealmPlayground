@@ -18,6 +18,21 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - private
+
+-(void) addContact {
+    
+    [self.navigationController pushViewController:[AddContactViewController new] animated:YES];
+    
+}
+
+-(void) setupNavigationRightButton {
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addContact)];
+    self.navigationItem.rightBarButtonItem = rightItem;
+    
+}
+
 #pragma mark - life cycle
 
 -(void) viewDidLoad {
@@ -25,6 +40,8 @@
     
     [self.navigationController.navigationBar setTranslucent:NO];
     [self setTitle:@"AddressBook"];
+    
+    [self setupNavigationRightButton];
     
 }
 

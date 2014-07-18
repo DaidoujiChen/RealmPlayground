@@ -13,5 +13,15 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+
+    //from pod
     #import <Realm/Realm.h>
+    #import <ReactiveCocoa/ReactiveCocoa.h>
+    #import <ReactiveCocoa/RACEXTScope.h>
+
+    //from project
+    #import "JVFloatLabeledTextField.h"
+    #import "JVFloatLabeledTextView.h"
+    #import "DaiDodgeKeyboard.h"
+
 #endif

@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		012C0FAA1978CDC600CF6672 /* AddContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C0FA81978CDC600CF6672 /* AddContactViewController.m */; };
+		012C0FAB1978CDC600CF6672 /* AddContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012C0FA91978CDC600CF6672 /* AddContactViewController.xib */; };
+		0141BB791978D1A800FE45A0 /* AddContactViewController+UIImagePickerHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0141BB781978D1A800FE45A0 /* AddContactViewController+UIImagePickerHandler.m */; };
+		0141BB821978F22A00FE45A0 /* JVFloatLabeledTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0141BB7D1978F22A00FE45A0 /* JVFloatLabeledTextField.m */; };
+		0141BB831978F22A00FE45A0 /* JVFloatLabeledTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0141BB7F1978F22A00FE45A0 /* JVFloatLabeledTextView.m */; };
+		0141BB841978F22A00FE45A0 /* NSString+TextDirectionality.m in Sources */ = {isa = PBXBuildFile; fileRef = 0141BB811978F22A00FE45A0 /* NSString+TextDirectionality.m */; };
+		0141BB8E1978FA4E00FE45A0 /* DaiDodgeKeyboard+AccessObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0141BB871978FA4E00FE45A0 /* DaiDodgeKeyboard+AccessObject.m */; };
+		0141BB8F1978FA4E00FE45A0 /* DaiDodgeKeyboard+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0141BB891978FA4E00FE45A0 /* DaiDodgeKeyboard+Animation.m */; };
+		0141BB901978FA4E00FE45A0 /* DaiDodgeKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 0141BB8B1978FA4E00FE45A0 /* DaiDodgeKeyboard.m */; };
+		0141BB911978FA4E00FE45A0 /* UIView+FirstResponderNotify.m in Sources */ = {isa = PBXBuildFile; fileRef = 0141BB8D1978FA4E00FE45A0 /* UIView+FirstResponderNotify.m */; };
+		0141BB941978FA8200FE45A0 /* AddContactViewController+TextFieldHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0141BB931978FA8200FE45A0 /* AddContactViewController+TextFieldHandler.m */; };
+		0141BB9719790B5000FE45A0 /* AddContactViewController+Components.m in Sources */ = {isa = PBXBuildFile; fileRef = 0141BB9619790B5000FE45A0 /* AddContactViewController+Components.m */; };
 		01768DAC1978C5EF009499FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01768DAB1978C5EF009499FD /* Foundation.framework */; };
 		01768DAE1978C5EF009499FD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01768DAD1978C5EF009499FD /* CoreGraphics.framework */; };
 		01768DB01978C5EF009499FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01768DAF1978C5EF009499FD /* UIKit.framework */; };
@@ -36,6 +48,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		012C0FA71978CDC600CF6672 /* AddContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddContactViewController.h; path = AddContactViewController/AddContactViewController.h; sourceTree = "<group>"; };
+		012C0FA81978CDC600CF6672 /* AddContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddContactViewController.m; path = AddContactViewController/AddContactViewController.m; sourceTree = "<group>"; };
+		012C0FA91978CDC600CF6672 /* AddContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddContactViewController.xib; path = AddContactViewController/AddContactViewController.xib; sourceTree = "<group>"; };
+		0141BB771978D1A800FE45A0 /* AddContactViewController+UIImagePickerHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AddContactViewController+UIImagePickerHandler.h"; path = "AddContactViewController/AddContactViewController+UIImagePickerHandler.h"; sourceTree = "<group>"; };
+		0141BB781978D1A800FE45A0 /* AddContactViewController+UIImagePickerHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AddContactViewController+UIImagePickerHandler.m"; path = "AddContactViewController/AddContactViewController+UIImagePickerHandler.m"; sourceTree = "<group>"; };
+		0141BB7C1978F22A00FE45A0 /* JVFloatLabeledTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVFloatLabeledTextField.h; sourceTree = "<group>"; };
+		0141BB7D1978F22A00FE45A0 /* JVFloatLabeledTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVFloatLabeledTextField.m; sourceTree = "<group>"; };
+		0141BB7E1978F22A00FE45A0 /* JVFloatLabeledTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVFloatLabeledTextView.h; sourceTree = "<group>"; };
+		0141BB7F1978F22A00FE45A0 /* JVFloatLabeledTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVFloatLabeledTextView.m; sourceTree = "<group>"; };
+		0141BB801978F22A00FE45A0 /* NSString+TextDirectionality.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TextDirectionality.h"; sourceTree = "<group>"; };
+		0141BB811978F22A00FE45A0 /* NSString+TextDirectionality.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TextDirectionality.m"; sourceTree = "<group>"; };
+		0141BB861978FA4E00FE45A0 /* DaiDodgeKeyboard+AccessObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DaiDodgeKeyboard+AccessObject.h"; sourceTree = "<group>"; };
+		0141BB871978FA4E00FE45A0 /* DaiDodgeKeyboard+AccessObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DaiDodgeKeyboard+AccessObject.m"; sourceTree = "<group>"; };
+		0141BB881978FA4E00FE45A0 /* DaiDodgeKeyboard+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DaiDodgeKeyboard+Animation.h"; sourceTree = "<group>"; };
+		0141BB891978FA4E00FE45A0 /* DaiDodgeKeyboard+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DaiDodgeKeyboard+Animation.m"; sourceTree = "<group>"; };
+		0141BB8A1978FA4E00FE45A0 /* DaiDodgeKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiDodgeKeyboard.h; sourceTree = "<group>"; };
+		0141BB8B1978FA4E00FE45A0 /* DaiDodgeKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaiDodgeKeyboard.m; sourceTree = "<group>"; };
+		0141BB8C1978FA4E00FE45A0 /* UIView+FirstResponderNotify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FirstResponderNotify.h"; sourceTree = "<group>"; };
+		0141BB8D1978FA4E00FE45A0 /* UIView+FirstResponderNotify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FirstResponderNotify.m"; sourceTree = "<group>"; };
+		0141BB921978FA8200FE45A0 /* AddContactViewController+TextFieldHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AddContactViewController+TextFieldHandler.h"; path = "AddContactViewController/AddContactViewController+TextFieldHandler.h"; sourceTree = "<group>"; };
+		0141BB931978FA8200FE45A0 /* AddContactViewController+TextFieldHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AddContactViewController+TextFieldHandler.m"; path = "AddContactViewController/AddContactViewController+TextFieldHandler.m"; sourceTree = "<group>"; };
+		0141BB9519790B5000FE45A0 /* AddContactViewController+Components.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AddContactViewController+Components.h"; path = "AddContactViewController/AddContactViewController+Components.h"; sourceTree = "<group>"; };
+		0141BB9619790B5000FE45A0 /* AddContactViewController+Components.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AddContactViewController+Components.m"; path = "AddContactViewController/AddContactViewController+Components.m"; sourceTree = "<group>"; };
 		01768DA81978C5EF009499FD /* RealmPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01768DAB1978C5EF009499FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		01768DAD1978C5EF009499FD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -86,6 +121,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		012C0FA61978CD4C00CF6672 /* AddContactViewController */ = {
+			isa = PBXGroup;
+			children = (
+				012C0FA71978CDC600CF6672 /* AddContactViewController.h */,
+				012C0FA81978CDC600CF6672 /* AddContactViewController.m */,
+				012C0FA91978CDC600CF6672 /* AddContactViewController.xib */,
+				0141BB771978D1A800FE45A0 /* AddContactViewController+UIImagePickerHandler.h */,
+				0141BB781978D1A800FE45A0 /* AddContactViewController+UIImagePickerHandler.m */,
+				0141BB921978FA8200FE45A0 /* AddContactViewController+TextFieldHandler.h */,
+				0141BB931978FA8200FE45A0 /* AddContactViewController+TextFieldHandler.m */,
+				0141BB9519790B5000FE45A0 /* AddContactViewController+Components.h */,
+				0141BB9619790B5000FE45A0 /* AddContactViewController+Components.m */,
+			);
+			name = AddContactViewController;
+			sourceTree = "<group>";
+		};
+		0141BB7A1978F1EF00FE45A0 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				0141BB851978FA4E00FE45A0 /* DaiDodgeKeyboard */,
+				0141BB7B1978F22A00FE45A0 /* JVFloatLabeledTextField */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		0141BB7B1978F22A00FE45A0 /* JVFloatLabeledTextField */ = {
+			isa = PBXGroup;
+			children = (
+				0141BB7C1978F22A00FE45A0 /* JVFloatLabeledTextField.h */,
+				0141BB7D1978F22A00FE45A0 /* JVFloatLabeledTextField.m */,
+				0141BB7E1978F22A00FE45A0 /* JVFloatLabeledTextView.h */,
+				0141BB7F1978F22A00FE45A0 /* JVFloatLabeledTextView.m */,
+				0141BB801978F22A00FE45A0 /* NSString+TextDirectionality.h */,
+				0141BB811978F22A00FE45A0 /* NSString+TextDirectionality.m */,
+			);
+			name = JVFloatLabeledTextField;
+			path = ThirdParty/JVFloatLabeledTextField;
+			sourceTree = "<group>";
+		};
+		0141BB851978FA4E00FE45A0 /* DaiDodgeKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				0141BB861978FA4E00FE45A0 /* DaiDodgeKeyboard+AccessObject.h */,
+				0141BB871978FA4E00FE45A0 /* DaiDodgeKeyboard+AccessObject.m */,
+				0141BB881978FA4E00FE45A0 /* DaiDodgeKeyboard+Animation.h */,
+				0141BB891978FA4E00FE45A0 /* DaiDodgeKeyboard+Animation.m */,
+				0141BB8A1978FA4E00FE45A0 /* DaiDodgeKeyboard.h */,
+				0141BB8B1978FA4E00FE45A0 /* DaiDodgeKeyboard.m */,
+				0141BB8C1978FA4E00FE45A0 /* UIView+FirstResponderNotify.h */,
+				0141BB8D1978FA4E00FE45A0 /* UIView+FirstResponderNotify.m */,
+			);
+			name = DaiDodgeKeyboard;
+			path = ThirdParty/DaiDodgeKeyboard;
+			sourceTree = "<group>";
+		};
 		01768D9F1978C5EE009499FD = {
 			isa = PBXGroup;
 			children = (
@@ -121,10 +211,12 @@
 		01768DB11978C5EF009499FD /* RealmPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				0141BB7A1978F1EF00FE45A0 /* ThirdParty */,
 				0197B6011978C983001DF7F5 /* RealmModel */,
 				01768DBA1978C5EF009499FD /* AppDelegate.h */,
 				01768DBB1978C5EF009499FD /* AppDelegate.m */,
 				0197B6051978CCCA001DF7F5 /* MainViewController */,
+				012C0FA61978CD4C00CF6672 /* AddContactViewController */,
 				01768DC31978C5EF009499FD /* Images.xcassets */,
 				01768DB21978C5EF009499FD /* Supporting Files */,
 			);
@@ -258,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01768DC41978C5EF009499FD /* Images.xcassets in Resources */,
+				012C0FAB1978CDC600CF6672 /* AddContactViewController.xib in Resources */,
 				0197B60A1978CCDE001DF7F5 /* MainViewController.xib in Resources */,
 				01768DB61978C5EF009499FD /* InfoPlist.strings in Resources */,
 			);
@@ -311,9 +404,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0141BB941978FA8200FE45A0 /* AddContactViewController+TextFieldHandler.m in Sources */,
 				01768DBC1978C5EF009499FD /* AppDelegate.m in Sources */,
 				0197B6041978C9E7001DF7F5 /* AddressBook.m in Sources */,
+				0141BB911978FA4E00FE45A0 /* UIView+FirstResponderNotify.m in Sources */,
+				0141BB8E1978FA4E00FE45A0 /* DaiDodgeKeyboard+AccessObject.m in Sources */,
+				0141BB901978FA4E00FE45A0 /* DaiDodgeKeyboard.m in Sources */,
+				0141BB841978F22A00FE45A0 /* NSString+TextDirectionality.m in Sources */,
+				0141BB831978F22A00FE45A0 /* JVFloatLabeledTextView.m in Sources */,
 				01768DB81978C5EF009499FD /* main.m in Sources */,
+				0141BB8F1978FA4E00FE45A0 /* DaiDodgeKeyboard+Animation.m in Sources */,
+				0141BB9719790B5000FE45A0 /* AddContactViewController+Components.m in Sources */,
+				012C0FAA1978CDC600CF6672 /* AddContactViewController.m in Sources */,
+				0141BB821978F22A00FE45A0 /* JVFloatLabeledTextField.m in Sources */,
+				0141BB791978D1A800FE45A0 /* AddContactViewController+UIImagePickerHandler.m in Sources */,
 				0197B6091978CCDE001DF7F5 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +539,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RealmPlayground/RealmPlayground-Prefix.pch";
 				INFOPLIST_FILE = "RealmPlayground/RealmPlayground-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -449,6 +554,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RealmPlayground/RealmPlayground-Prefix.pch";
 				INFOPLIST_FILE = "RealmPlayground/RealmPlayground-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

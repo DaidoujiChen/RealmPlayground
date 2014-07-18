@@ -1,10 +1,19 @@
 PODS:
+  - ReactiveCocoa (2.3.1):
+    - ReactiveCocoa/UI
+  - ReactiveCocoa/Core (2.3.1):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.3.1)
+  - ReactiveCocoa/UI (2.3.1):
+    - ReactiveCocoa/Core
   - Realm (0.22.0)
 
 DEPENDENCIES:
+  - ReactiveCocoa (~> 2.3.1)
   - Realm (~> 0.22.0)
 
 SPEC CHECKSUMS:
+  ReactiveCocoa: dca75777b9d18990c8714a3a6f2149f29b4d1462
   Realm: 5d80f0aa0129396444c88c2c9f6db0e2f75766e0
 
 COCOAPODS: 0.33.1

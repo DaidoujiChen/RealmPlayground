@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "AddContactViewController.h"
+
 @interface MainViewController : UIViewController
 
 @end
