@@ -37,4 +37,19 @@
     
 }
 
+-(void) tableView : (UITableView*) tableView commitEditingStyle : (UITableViewCellEditingStyle) editingStyle forRowAtIndexPath : (NSIndexPath*) indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        AddressBook *deleteData = [[RealmInterface dataSourceFilter:self.searchFilterString] objectAtIndex:indexPath.row];
+        [RealmInterface deleteObject:deleteData];
+        [tableView reloadData];
+        
+    }
+    
+}
+
+#pragma mark - UITableViewDelegate
+
+
 @end

@@ -22,5 +22,7 @@
 
 +(RLMArray*) dataSourceFilter : (NSString*) filterString;
 
++(void) deleteObject : (id) anObject;
+
 
 @end

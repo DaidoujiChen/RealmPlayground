@@ -85,6 +85,14 @@
     
 }
 
++(void) deleteObject : (id) anObject {
+    
+    [[self realm] beginWriteTransaction];
+    [[self realm] deleteObject:anObject];
+    [[self realm] commitWriteTransaction];
+    
+}
+
 #pragma mark - private
 
 +(RLMRealm*) realm {
