@@ -8,8 +8,6 @@
 
 #import "RealmInterface.h"
 
-#import "AddressBook.h"
-
 #define createNewData AddressBook *addressBook = [AddressBook new];
 #define addProperty(arg) addressBook.arg = arg;
 
@@ -65,6 +63,12 @@
     [[self realm] beginWriteTransaction];
     [[self realm] addObject:addressBook];
     [[self realm] commitWriteTransaction];
+    
+}
+
++(RLMArray*) dataSource {
+    
+    return [AddressBook allObjects];
     
 }
 

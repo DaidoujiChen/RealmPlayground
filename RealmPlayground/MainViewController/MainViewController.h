@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 #import "AddContactViewController.h"
+#import "MainCell.h"
 
 @interface MainViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UITableView *mainTableView;
 
 @end

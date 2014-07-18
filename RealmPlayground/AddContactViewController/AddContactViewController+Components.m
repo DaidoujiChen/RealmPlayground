@@ -55,7 +55,7 @@
     
 }
 
--(void) textfieldDone {
+-(void) textFieldDone {
     
     [[self.view findFirstResponder] resignFirstResponder];
     
@@ -96,7 +96,7 @@
                                                                   action:@selector(prevTextField)];
     
     UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(textfieldDone)];
+    UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(textFieldDone)];
     toolBar.items = @[prevButton, nextButton, space, done];
     
     return toolBar;

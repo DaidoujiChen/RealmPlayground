@@ -20,6 +20,8 @@
 		0141BB911978FA4E00FE45A0 /* UIView+FirstResponderNotify.m in Sources */ = {isa = PBXBuildFile; fileRef = 0141BB8D1978FA4E00FE45A0 /* UIView+FirstResponderNotify.m */; };
 		0141BB941978FA8200FE45A0 /* AddContactViewController+TextFieldHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0141BB931978FA8200FE45A0 /* AddContactViewController+TextFieldHandler.m */; };
 		0141BB9719790B5000FE45A0 /* AddContactViewController+Components.m in Sources */ = {isa = PBXBuildFile; fileRef = 0141BB9619790B5000FE45A0 /* AddContactViewController+Components.m */; };
+		014B0499197916AE008C7D32 /* MainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 014B0498197916AE008C7D32 /* MainCell.m */; };
+		014B049C197917A4008C7D32 /* MainViewController+TableViewHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 014B049B197917A4008C7D32 /* MainViewController+TableViewHandler.m */; };
 		01768DAC1978C5EF009499FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01768DAB1978C5EF009499FD /* Foundation.framework */; };
 		01768DAE1978C5EF009499FD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01768DAD1978C5EF009499FD /* CoreGraphics.framework */; };
 		01768DB01978C5EF009499FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01768DAF1978C5EF009499FD /* UIKit.framework */; };
@@ -74,6 +76,10 @@
 		0141BB931978FA8200FE45A0 /* AddContactViewController+TextFieldHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AddContactViewController+TextFieldHandler.m"; path = "AddContactViewController/AddContactViewController+TextFieldHandler.m"; sourceTree = "<group>"; };
 		0141BB9519790B5000FE45A0 /* AddContactViewController+Components.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AddContactViewController+Components.h"; path = "AddContactViewController/AddContactViewController+Components.h"; sourceTree = "<group>"; };
 		0141BB9619790B5000FE45A0 /* AddContactViewController+Components.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AddContactViewController+Components.m"; path = "AddContactViewController/AddContactViewController+Components.m"; sourceTree = "<group>"; };
+		014B0497197916AE008C7D32 /* MainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainCell.h; path = MainViewController/MainCell.h; sourceTree = "<group>"; };
+		014B0498197916AE008C7D32 /* MainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainCell.m; path = MainViewController/MainCell.m; sourceTree = "<group>"; };
+		014B049A197917A4008C7D32 /* MainViewController+TableViewHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MainViewController+TableViewHandler.h"; path = "MainViewController/MainViewController+TableViewHandler.h"; sourceTree = "<group>"; };
+		014B049B197917A4008C7D32 /* MainViewController+TableViewHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MainViewController+TableViewHandler.m"; path = "MainViewController/MainViewController+TableViewHandler.m"; sourceTree = "<group>"; };
 		01768DA81978C5EF009499FD /* RealmPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01768DAB1978C5EF009499FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		01768DAD1978C5EF009499FD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -280,6 +286,10 @@
 				0197B6061978CCDE001DF7F5 /* MainViewController.h */,
 				0197B6071978CCDE001DF7F5 /* MainViewController.m */,
 				0197B6081978CCDE001DF7F5 /* MainViewController.xib */,
+				014B049A197917A4008C7D32 /* MainViewController+TableViewHandler.h */,
+				014B049B197917A4008C7D32 /* MainViewController+TableViewHandler.m */,
+				014B0497197916AE008C7D32 /* MainCell.h */,
+				014B0498197916AE008C7D32 /* MainCell.m */,
 			);
 			name = MainViewController;
 			sourceTree = "<group>";
@@ -429,9 +439,11 @@
 				0141BB8F1978FA4E00FE45A0 /* DaiDodgeKeyboard+Animation.m in Sources */,
 				0141BB9719790B5000FE45A0 /* AddContactViewController+Components.m in Sources */,
 				012C0FAA1978CDC600CF6672 /* AddContactViewController.m in Sources */,
+				014B0499197916AE008C7D32 /* MainCell.m in Sources */,
 				0141BB821978F22A00FE45A0 /* JVFloatLabeledTextField.m in Sources */,
 				011FFA6219790F9F003A54D0 /* RealmInterface.m in Sources */,
 				0141BB791978D1A800FE45A0 /* AddContactViewController+UIImagePickerHandler.m in Sources */,
+				014B049C197917A4008C7D32 /* MainViewController+TableViewHandler.m in Sources */,
 				0197B6091978CCDE001DF7F5 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

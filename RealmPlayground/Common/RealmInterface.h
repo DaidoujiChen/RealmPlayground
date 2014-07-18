@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "AddressBook.h"
+
 @interface RealmInterface : NSObject
 
 +(void) addNewContactToDB : (NSString*) firstNameString
@@ -17,5 +19,7 @@
           withPhoneNumber : (NSString*) phoneNumberString
               withAddress : (NSString*) addressString
                  withNote : (NSString*) noteString;
+
++(NSArray*) dataSource;
 
 @end

@@ -40,6 +40,7 @@
     
     [self.navigationController.navigationBar setTranslucent:NO];
     [self setTitle:@"AddressBook"];
+    [self.mainTableView registerClass:[MainCell class] forCellReuseIdentifier:@"MainCell"];
     
     [self setupNavigationRightButton];
     
