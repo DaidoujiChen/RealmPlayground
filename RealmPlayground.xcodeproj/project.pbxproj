@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		011FFA6219790F9F003A54D0 /* RealmInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 011FFA6119790F9F003A54D0 /* RealmInterface.m */; };
 		012C0FAA1978CDC600CF6672 /* AddContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C0FA81978CDC600CF6672 /* AddContactViewController.m */; };
 		012C0FAB1978CDC600CF6672 /* AddContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012C0FA91978CDC600CF6672 /* AddContactViewController.xib */; };
 		0141BB791978D1A800FE45A0 /* AddContactViewController+UIImagePickerHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0141BB781978D1A800FE45A0 /* AddContactViewController+UIImagePickerHandler.m */; };
@@ -48,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		011FFA6019790F9F003A54D0 /* RealmInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RealmInterface.h; path = Common/RealmInterface.h; sourceTree = "<group>"; };
+		011FFA6119790F9F003A54D0 /* RealmInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RealmInterface.m; path = Common/RealmInterface.m; sourceTree = "<group>"; };
 		012C0FA71978CDC600CF6672 /* AddContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddContactViewController.h; path = AddContactViewController/AddContactViewController.h; sourceTree = "<group>"; };
 		012C0FA81978CDC600CF6672 /* AddContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddContactViewController.m; path = AddContactViewController/AddContactViewController.m; sourceTree = "<group>"; };
 		012C0FA91978CDC600CF6672 /* AddContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddContactViewController.xib; path = AddContactViewController/AddContactViewController.xib; sourceTree = "<group>"; };
@@ -121,6 +124,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		011FFA5F19790F56003A54D0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				011FFA6019790F9F003A54D0 /* RealmInterface.h */,
+				011FFA6119790F9F003A54D0 /* RealmInterface.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		012C0FA61978CD4C00CF6672 /* AddContactViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +225,7 @@
 			children = (
 				0141BB7A1978F1EF00FE45A0 /* ThirdParty */,
 				0197B6011978C983001DF7F5 /* RealmModel */,
+				011FFA5F19790F56003A54D0 /* Common */,
 				01768DBA1978C5EF009499FD /* AppDelegate.h */,
 				01768DBB1978C5EF009499FD /* AppDelegate.m */,
 				0197B6051978CCCA001DF7F5 /* MainViewController */,
@@ -417,6 +430,7 @@
 				0141BB9719790B5000FE45A0 /* AddContactViewController+Components.m in Sources */,
 				012C0FAA1978CDC600CF6672 /* AddContactViewController.m in Sources */,
 				0141BB821978F22A00FE45A0 /* JVFloatLabeledTextField.m in Sources */,
+				011FFA6219790F9F003A54D0 /* RealmInterface.m in Sources */,
 				0141BB791978D1A800FE45A0 /* AddContactViewController+UIImagePickerHandler.m in Sources */,
 				0197B6091978CCDE001DF7F5 /* MainViewController.m in Sources */,
 			);

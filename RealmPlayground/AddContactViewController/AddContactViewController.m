@@ -72,6 +72,20 @@
         
     }];
     
+    [[self.submitButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(UIButton *btn) {
+        
+        [RealmInterface addNewContactToDB:self.firstNameTextField.text
+                             withLastName:self.lastNameTextField.text
+                              withCompany:self.companyTextField.text
+                               withAvatar:(self.avatarImageView.image?UIImageJPEGRepresentation(self.avatarImageView.image, 1.0f):nil)
+                          withPhoneNumber:self.phoneNumberTextField.text
+                              withAddress:self.addressTextField.text
+                                 withNote:self.noteTextField.text];
+        
+        [self.navigationController popViewControllerAnimated:YES];
+        
+    }];
+    
 }
 
 #pragma mark - life cycle

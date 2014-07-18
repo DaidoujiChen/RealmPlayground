@@ -13,7 +13,7 @@
 @property NSString *firstNameString;
 @property NSString *lastNameString;
 @property NSString *companyString;
-@property UIImage *avatarImage;
+@property NSData *avatarImageData;
 @property NSString *phoneNumberString;
 @property NSString *addressString;
 @property NSString *noteString;
