@@ -51,5 +51,13 @@
 
 #pragma mark - UITableViewDelegate
 
+-(void) tableView : (UITableView*) tableView didSelectRowAtIndexPath : (NSIndexPath*) indexPath {
+
+    EditContactViewController *editViewController = [[EditContactViewController alloc] initWithNibName:@"AddContactViewController" bundle:nil];
+    editViewController.editAddressBook = [[RealmInterface dataSourceFilter:self.searchFilterString] objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:editViewController animated:YES];
+    
+}
+
 
 @end

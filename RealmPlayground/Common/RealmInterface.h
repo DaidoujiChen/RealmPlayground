@@ -12,13 +12,22 @@
 
 @interface RealmInterface : NSObject
 
-+(void) addNewContactToDB : (NSString*) firstNameString
-             withLastName : (NSString*) lastNameString
-              withCompany : (NSString*) companyString
-               withAvatar : (NSData*) avatarImageData
-          withPhoneNumber : (NSString*) phoneNumberString
-              withAddress : (NSString*) addressString
-                 withNote : (NSString*) noteString;
++(void) addNewContact : (NSString*) firstNameString
+         withLastName : (NSString*) lastNameString
+          withCompany : (NSString*) companyString
+           withAvatar : (NSData*) avatarImageData
+      withPhoneNumber : (NSString*) phoneNumberString
+          withAddress : (NSString*) addressString
+             withNote : (NSString*) noteString;
+
++(void) editContactData : (AddressBook*) addressBook
+          withFirstName : (NSString*) firstNameString
+           withLastName : (NSString*) lastNameString
+            withCompany : (NSString*) companyString
+             withAvatar : (NSData*) avatarImageData
+        withPhoneNumber : (NSString*) phoneNumberString
+            withAddress : (NSString*) addressString
+               withNote : (NSString*) noteString;
 
 +(RLMArray*) dataSourceFilter : (NSString*) filterString;
 

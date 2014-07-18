@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "AddContactViewController.h"
+#import "EditContactViewController.h"
 #import "MainCell.h"
 
 @interface MainViewController : UIViewController

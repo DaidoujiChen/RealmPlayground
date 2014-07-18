@@ -37,6 +37,7 @@
 		0197B6041978C9E7001DF7F5 /* AddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 0197B6031978C9E7001DF7F5 /* AddressBook.m */; };
 		0197B6091978CCDE001DF7F5 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0197B6071978CCDE001DF7F5 /* MainViewController.m */; };
 		0197B60A1978CCDE001DF7F5 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0197B6081978CCDE001DF7F5 /* MainViewController.xib */; };
+		01BA5DF319794BAC00017C14 /* EditContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BA5DF219794BAC00017C14 /* EditContactViewController.m */; };
 		31357B8CC04341F78DFCDE78 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C2D3BFE7174BF4A0C8E8BA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,8 @@
 		0197B6061978CCDE001DF7F5 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = MainViewController/MainViewController.h; sourceTree = "<group>"; };
 		0197B6071978CCDE001DF7F5 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = MainViewController/MainViewController.m; sourceTree = "<group>"; };
 		0197B6081978CCDE001DF7F5 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = MainViewController/MainViewController.xib; sourceTree = "<group>"; };
+		01BA5DF119794BAC00017C14 /* EditContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditContactViewController.h; path = EditContactViewController/EditContactViewController.h; sourceTree = "<group>"; };
+		01BA5DF219794BAC00017C14 /* EditContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditContactViewController.m; path = EditContactViewController/EditContactViewController.m; sourceTree = "<group>"; };
 		73C2D3BFE7174BF4A0C8E8BA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C370C497F5A54BFD92E60FEE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -236,6 +239,7 @@
 				01768DBB1978C5EF009499FD /* AppDelegate.m */,
 				0197B6051978CCCA001DF7F5 /* MainViewController */,
 				012C0FA61978CD4C00CF6672 /* AddContactViewController */,
+				01BA5DF019794B6A00017C14 /* EditContactViewController */,
 				01768DC31978C5EF009499FD /* Images.xcassets */,
 				01768DB21978C5EF009499FD /* Supporting Files */,
 			);
@@ -292,6 +296,15 @@
 				014B0498197916AE008C7D32 /* MainCell.m */,
 			);
 			name = MainViewController;
+			sourceTree = "<group>";
+		};
+		01BA5DF019794B6A00017C14 /* EditContactViewController */ = {
+			isa = PBXGroup;
+			children = (
+				01BA5DF119794BAC00017C14 /* EditContactViewController.h */,
+				01BA5DF219794BAC00017C14 /* EditContactViewController.m */,
+			);
+			name = EditContactViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,6 +449,7 @@
 				0141BB841978F22A00FE45A0 /* NSString+TextDirectionality.m in Sources */,
 				0141BB831978F22A00FE45A0 /* JVFloatLabeledTextView.m in Sources */,
 				01768DB81978C5EF009499FD /* main.m in Sources */,
+				01BA5DF319794BAC00017C14 /* EditContactViewController.m in Sources */,
 				0141BB8F1978FA4E00FE45A0 /* DaiDodgeKeyboard+Animation.m in Sources */,
 				0141BB9719790B5000FE45A0 /* AddContactViewController+Components.m in Sources */,
 				012C0FAA1978CDC600CF6672 /* AddContactViewController.m in Sources */,

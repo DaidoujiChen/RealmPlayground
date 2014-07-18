@@ -31,7 +31,7 @@
 
 #pragma mark - class method
 
-+(void) addNewContactToDB : (NSString*) firstNameString
++(void) addNewContact : (NSString*) firstNameString
              withLastName : (NSString*) lastNameString
               withCompany : (NSString*) companyString
                withAvatar : (NSData*) avatarImageData
@@ -66,9 +66,36 @@
     
 }
 
-+(RLMArray*) dataSource {
++(void) editContactData : (AddressBook*) addressBook
+          withFirstName : (NSString*) firstNameString
+           withLastName : (NSString*) lastNameString
+            withCompany : (NSString*) companyString
+             withAvatar : (NSData*) avatarImageData
+        withPhoneNumber : (NSString*) phoneNumberString
+            withAddress : (NSString*) addressString
+                withNote : (NSString*) noteString {
     
-    return [AddressBook allObjects];
+    [[self realm] beginWriteTransaction];
+    
+    addProperty(firstNameString)
+    addProperty(lastNameString)
+    addProperty(companyString)
+    
+    if (avatarImageData) {
+        addProperty(avatarImageData)
+    } else {
+        
+        UIImageView *blackImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+        [blackImageView setBackgroundColor:[UIColor blackColor]];
+        addressBook.avatarImageData = UIImageJPEGRepresentation([blackImageView convertToImage], 1.0f);
+        
+    }
+    
+    addProperty(phoneNumberString)
+    addProperty(addressString)
+    addProperty(noteString)
+
+    [[self realm] commitWriteTransaction];
     
 }
 
@@ -103,6 +130,12 @@
         returnRealm = [RLMRealm defaultRealm];
     });
     return returnRealm;
+    
+}
+
++(RLMArray*) dataSource {
+    
+    return [AddressBook allObjects];
     
 }
 

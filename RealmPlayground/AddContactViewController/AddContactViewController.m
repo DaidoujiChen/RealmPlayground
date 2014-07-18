@@ -62,7 +62,11 @@
 
 -(void) setupSubmitButton {
     
-    RAC(self.submitButton, enabled) = [RACSignal combineLatest:@[self.firstNameTextField.rac_textSignal, self.lastNameTextField.rac_textSignal] reduce:^id(NSString *firstName, NSString *lastName){
+    RACSignal *firstNameSignal = [RACSignal merge:@[self.firstNameTextField.rac_textSignal, RACObserve(self.firstNameTextField, text)]];
+    
+    RACSignal *lastNameSignal = [RACSignal merge:@[self.lastNameTextField.rac_textSignal, RACObserve(self.lastNameTextField, text)]];
+    
+    RAC(self.submitButton, enabled) = [RACSignal combineLatest:@[firstNameSignal, lastNameSignal] reduce:^id(NSString *firstName, NSString *lastName){
         
         if (firstName.length && lastName.length) {
             return @YES;
@@ -74,13 +78,13 @@
     
     [[self.submitButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(UIButton *btn) {
         
-        [RealmInterface addNewContactToDB:self.firstNameTextField.text
-                             withLastName:self.lastNameTextField.text
-                              withCompany:self.companyTextField.text
-                               withAvatar:(self.avatarImageView.image?UIImageJPEGRepresentation(self.avatarImageView.image, 1.0f):nil)
-                          withPhoneNumber:self.phoneNumberTextField.text
-                              withAddress:self.addressTextField.text
-                                 withNote:self.noteTextField.text];
+        [RealmInterface addNewContact:self.firstNameTextField.text
+                         withLastName:self.lastNameTextField.text
+                          withCompany:self.companyTextField.text
+                           withAvatar:(self.avatarImageView.image?UIImageJPEGRepresentation(self.avatarImageView.image, 1.0f):nil)
+                      withPhoneNumber:self.phoneNumberTextField.text
+                          withAddress:self.addressTextField.text
+                             withNote:self.noteTextField.text];
         
         [self.navigationController popViewControllerAnimated:YES];
         
@@ -92,6 +96,8 @@
 
 -(void) viewDidLoad {
     [super viewDidLoad];
+    
+    [self setTitle:@"Add"];
     
     [self setupTextFields];
     [self setupSubmitButton];

@@ -64,6 +64,21 @@
         
     }];
     
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIKeyboardWillShowNotification object:nil] subscribeNext:^(id x) {
+
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tabScreenAction)];
+        [self.view addGestureRecognizer:tapGesture];
+        
+    }];
+    
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIKeyboardWillHideNotification object:nil] subscribeNext:^(id x) {
+        
+        for (UIGestureRecognizer *eachGesture in self.view.gestureRecognizers) {
+            [self.view removeGestureRecognizer:eachGesture];
+        }
+        
+    }];
+    
     [RACObserve(self, searchFilterString) subscribeNext:^(id x) {
         
         [self.mainTableView reloadData];
@@ -72,9 +87,8 @@
     
 }
 
-#pragma mark - ibaction
 
--(IBAction) tabScreenAction : (id) sender {
+-(void) tabScreenAction {
     
     if ([self.mainSearchBar isFirstResponder]) {
         [self.mainSearchBar resignFirstResponder];
