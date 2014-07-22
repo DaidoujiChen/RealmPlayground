@@ -17,7 +17,6 @@
 @property NSString *phoneNumberString;
 @property NSString *addressString;
 @property NSString *noteString;
-@property NSDate *createDate;
 
 @end
 
