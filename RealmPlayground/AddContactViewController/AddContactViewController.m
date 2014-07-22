@@ -76,15 +76,35 @@
         
     }];
     
+    @weakify(self);
     [[self.submitButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(UIButton *btn) {
+        @strongify(self);
         
-        [RealmInterface addNewContact:self.firstNameTextField.text
-                         withLastName:self.lastNameTextField.text
-                          withCompany:self.companyTextField.text
-                           withAvatar:(self.avatarImageView.image?UIImageJPEGRepresentation(self.avatarImageView.image, 1.0f):nil)
-                      withPhoneNumber:self.phoneNumberTextField.text
-                          withAddress:self.addressTextField.text
-                             withNote:self.noteTextField.text];
+        [RealmInterface addNewContact:^AddressBook*(AddressBook *addressbook) {
+            
+            addressbook.firstNameString = self.firstNameTextField.text;
+            addressbook.lastNameString = self.lastNameTextField.text;
+            addressbook.companyString = self.companyTextField.text;
+            
+            if (self.avatarImageView.image) {
+                
+                addressbook.avatarImageData = UIImageJPEGRepresentation(self.avatarImageView.image, 1.0f);
+                
+            } else {
+                
+                UIImageView *blackImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+                [blackImageView setBackgroundColor:[UIColor blackColor]];
+                addressbook.avatarImageData = UIImageJPEGRepresentation([blackImageView convertToImage], 1.0f);
+                
+            }
+
+            addressbook.phoneNumberString = self.phoneNumberTextField.text;
+            addressbook.addressString = self.addressTextField.text;
+            addressbook.noteString = self.noteTextField.text;
+            
+            return addressbook;
+            
+        }];
         
         [self.navigationController popViewControllerAnimated:YES];
         

@@ -24,5 +24,6 @@
     #import "JVFloatLabeledTextView.h"
     #import "DaiDodgeKeyboard.h"
     #import "RealmInterface.h"
+    #import "GlobalFunctions.h"
 
 #endif
