@@ -36,6 +36,23 @@
     
 }
 
++(void) exchangeContactFomrIndex : (NSInteger) fromIndex toIndex : (NSInteger) toIndex {
+    
+    AddressBook *fromObject = [[AddressBook allObjects] objectAtIndex:fromIndex];
+    AddressBook *toObject = [[AddressBook allObjects] objectAtIndex:toIndex];
+
+    [[RLMRealm defaultRealm] beginWriteTransaction];
+
+    for (RLMProperty *prop in fromObject.objectSchema.properties) {
+        id swapObject = fromObject[prop.name];
+        fromObject[prop.name] = toObject[prop.name];
+        toObject[prop.name] = swapObject;
+    }
+    
+    [[RLMRealm defaultRealm] commitWriteTransaction];
+
+}
+
 +(RLMArray*) dataSourceFilter : (NSString*) filterString {
     
     if (filterString) {

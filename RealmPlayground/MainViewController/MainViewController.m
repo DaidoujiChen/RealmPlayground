@@ -26,10 +26,18 @@
     
 }
 
+-(void) editeditContact {
+    
+    self.mainTableView.editing = !self.mainTableView.editing;
+    
+}
+
 -(void) setupNavigationRightButton {
     
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addContact)];
-    self.navigationItem.rightBarButtonItem = rightItem;
+    UIBarButtonItem *addContactItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addContact)];
+    UIBarButtonItem *editContactItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editeditContact)];
+    
+    self.navigationItem.rightBarButtonItems = @[addContactItem, editContactItem];
     
 }
 

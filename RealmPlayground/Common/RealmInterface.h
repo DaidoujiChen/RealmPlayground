@@ -21,6 +21,8 @@
 
 +(void) addNewContact : (AddressBook*(^)(AddressBook *addressbook)) AddressBookBlock;
 
++(void) exchangeContactFomrIndex : (NSInteger) fromIndex toIndex : (NSInteger) toIndex;
+
 +(RLMArray*) dataSourceFilter : (NSString*) filterString;
 
 +(void) deleteObject : (id) anObject;

@@ -49,6 +49,20 @@
     
 }
 
+-(BOOL) tableView : (UITableView*) tableView canEditRowAtIndexPath : (NSIndexPath*) indexPath {
+    
+    return YES;
+    
+}
+
+-(void) tableView : (UITableView*) tableView moveRowAtIndexPath : (NSIndexPath*) sourceIndexPath toIndexPath : (NSIndexPath*) destinationIndexPath {
+    
+    [RealmInterface exchangeContactFomrIndex:sourceIndexPath.row toIndex:destinationIndexPath.row];
+    [tableView reloadData];
+    
+}
+
+
 #pragma mark - UITableViewDelegate
 
 -(void) tableView : (UITableView*) tableView didSelectRowAtIndexPath : (NSIndexPath*) indexPath {
