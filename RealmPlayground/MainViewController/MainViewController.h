@@ -16,7 +16,7 @@
 
 @property (nonatomic, strong) NSString *searchFilterString;
 
-@property (weak, nonatomic) IBOutlet UITableView *mainTableView;
-@property (weak, nonatomic) IBOutlet UISearchBar *mainSearchBar;
+@property (nonatomic, weak) IBOutlet UITableView *mainTableView;
+@property (nonatomic, weak) IBOutlet UISearchBar *mainSearchBar;
 
 @end

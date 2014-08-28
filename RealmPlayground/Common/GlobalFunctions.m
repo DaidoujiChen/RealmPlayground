@@ -12,51 +12,42 @@
 
 @implementation UIView (GlobalFunctions)
 
--(UIImage*) convertToImage {
-    
-    UIImage *returnimage;
-    UIGraphicsBeginImageContext(CGSizeMake(self.frame.size.width,self.frame.size.height));
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
-    [self.layer renderInContext:ctx];
-    returnimage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return returnimage;
-    
+- (UIImage *)convertToImage
+{
+	UIImage *returnimage;
+	UIGraphicsBeginImageContext(CGSizeMake(self.frame.size.width, self.frame.size.height));
+	CGContextRef ctx = UIGraphicsGetCurrentContext();
+	[self.layer renderInContext:ctx];
+	returnimage = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	return returnimage;
 }
 
--(UIView*) findFirstResponder {
-    
-    if (self.isFirstResponder) return self;
-    for (UIView *subView in self.subviews) {
-        UIView *firstResponder = [subView findFirstResponder];
-        if (firstResponder != nil) return firstResponder;
-    }
-    return nil;
-    
+- (UIView *)findFirstResponder
+{
+	if (self.isFirstResponder) return self;
+	for (UIView *subView in self.subviews) {
+		UIView *firstResponder = [subView findFirstResponder];
+		if (firstResponder != nil) return firstResponder;
+	}
+	return nil;
 }
 
 @end
 
 @implementation UISearchBar (GlobalFunctions)
 
--(RACSignal*) rac_textSignal {
-    
-    self.delegate = (id<UISearchBarDelegate>)self;
-    RACSignal *signal = objc_getAssociatedObject(self, _cmd);
-    
-    if (signal != nil) return signal;
-    
-    signal = [[self rac_signalForSelector:@selector(searchBar:textDidChange:)
-                             fromProtocol:@protocol(UISearchBarDelegate)] map:^id(RACTuple *tuple) {
-        return tuple.second;
-    }];
-    
-    objc_setAssociatedObject(self, _cmd, signal, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    return signal;
-    
+- (RACSignal *)rac_textSignal
+{
+	self.delegate = (id <UISearchBarDelegate> )self;
+	RACSignal *signal = objc_getAssociatedObject(self, _cmd);
+	if (signal != nil) return signal;
+	signal = [[self rac_signalForSelector:@selector(searchBar:textDidChange:) fromProtocol:@protocol(UISearchBarDelegate)] map: ^id (RACTuple *tuple) {
+	    return tuple.second;
+	}];
+	objc_setAssociatedObject(self, _cmd, signal, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+	return signal;
 }
 
 @end
 
-@implementation GlobalFunctions
-@end

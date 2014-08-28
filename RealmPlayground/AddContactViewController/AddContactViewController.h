@@ -10,13 +10,13 @@
 
 @interface AddContactViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
-@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *firstNameTextField;
-@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *lastNameTextField;
-@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *companyTextField;
-@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *phoneNumberTextField;
-@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *addressTextField;
-@property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *noteTextField;
-@property (weak, nonatomic) IBOutlet UIButton *submitButton;
+@property (nonatomic, weak) IBOutlet UIImageView *avatarImageView;
+@property (nonatomic, weak) IBOutlet JVFloatLabeledTextField *firstNameTextField;
+@property (nonatomic, weak) IBOutlet JVFloatLabeledTextField *lastNameTextField;
+@property (nonatomic, weak) IBOutlet JVFloatLabeledTextField *companyTextField;
+@property (nonatomic, weak) IBOutlet JVFloatLabeledTextField *phoneNumberTextField;
+@property (nonatomic, weak) IBOutlet JVFloatLabeledTextField *addressTextField;
+@property (nonatomic, weak) IBOutlet JVFloatLabeledTextField *noteTextField;
+@property (nonatomic, weak) IBOutlet UIButton *submitButton;
 
 @end

@@ -10,6 +10,6 @@
 
 @interface AddContactViewController (Components)
 
--(UIToolbar*) createToolbar;
+- (UIToolbar *)createToolbar;
 
 @end

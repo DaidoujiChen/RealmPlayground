@@ -10,16 +10,13 @@
 
 @interface UIView (GlobalFunctions)
 
--(UIImage*) convertToImage;
--(UIView*) findFirstResponder;
+- (UIImage *)convertToImage;
+- (UIView *)findFirstResponder;
 
 @end
 
 @interface UISearchBar (GlobalFunctions)
 
--(RACSignal*) rac_textSignal;
+- (RACSignal *)rac_textSignal;
 
-@end
-
-@interface GlobalFunctions : NSObject
 @end

@@ -10,20 +10,19 @@
 
 @implementation AddContactViewController (UIImagePickerHandler)
 
--(void) imagePickerController : (UIImagePickerController*) picker didFinishPickingMediaWithInfo : (NSDictionary*) info {
-    
-    self.avatarImageView.image = info[@"UIImagePickerControllerEditedImage"];
-    
-    [self dismissViewControllerAnimated:YES completion:^{
-    }];
-    
+#pragma mark - UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+	self.avatarImageView.image = info[@"UIImagePickerControllerEditedImage"];
+	[self dismissViewControllerAnimated:YES completion: ^{
+	}];
 }
 
--(void) imagePickerControllerDidCancel : (UIImagePickerController*) picker {
-    
-    [self dismissViewControllerAnimated:YES completion:^{
-    }];
-    
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+	[self dismissViewControllerAnimated:YES completion: ^{
+	}];
 }
 
 @end

@@ -12,20 +12,16 @@
 
 @interface RLMObject (Edit)
 
--(void) editContact : (AddressBook*(^)(AddressBook *addressbook)) AddressBookBlock;
+- (void)editContact:(AddressBook *(^)(AddressBook *addressbook))AddressBookBlock;
 
 @end
 
 
 @interface RealmInterface : NSObject
 
-+(void) addNewContact : (AddressBook*(^)(AddressBook *addressbook)) AddressBookBlock;
-
-+(void) exchangeContactFomrIndex : (NSInteger) fromIndex toIndex : (NSInteger) toIndex;
-
-+(RLMArray*) dataSourceFilter : (NSString*) filterString;
-
-+(void) deleteObject : (id) anObject;
-
++ (void)addNewContact:(AddressBook *(^)(AddressBook *addressbook))AddressBookBlock;
++ (void)exchangeContactFomrIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex;
++ (RLMArray *)dataSourceFilter:(NSString *)filterString;
++ (void)deleteObject:(id)anObject;
 
 @end

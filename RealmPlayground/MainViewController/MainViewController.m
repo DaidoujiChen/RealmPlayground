@@ -10,95 +10,83 @@
 
 @interface MainViewController ()
 
+- (void)addContact;
+- (void)editeditContact;
+- (void)setupNavigationRightButton;
+- (void)setupMainSearchBar;
+- (void)tabScreenAction;
+
 @end
 
 @implementation MainViewController
 
--(void) didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 #pragma mark - private
 
--(void) addContact {
-    
-    [self.navigationController pushViewController:[AddContactViewController new] animated:YES];
-    
+- (void)addContact
+{
+	[self.navigationController pushViewController:[AddContactViewController new] animated:YES];
 }
 
--(void) editeditContact {
-    
-    self.mainTableView.editing = !self.mainTableView.editing;
-    
+- (void)editeditContact
+{
+	self.mainTableView.editing = !self.mainTableView.editing;
 }
 
--(void) setupNavigationRightButton {
-    
-    UIBarButtonItem *addContactItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addContact)];
-    UIBarButtonItem *editContactItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editeditContact)];
-    
-    self.navigationItem.rightBarButtonItems = @[addContactItem, editContactItem];
-    
+- (void)setupNavigationRightButton
+{
+	UIBarButtonItem *addContactItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addContact)];
+	UIBarButtonItem *editContactItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editeditContact)];
+	self.navigationItem.rightBarButtonItems = @[addContactItem, editContactItem];
 }
 
--(void) setupMainSearchBar {
-    
-    [[self.mainSearchBar rac_textSignal] subscribeNext:^(NSString* text) {
-        
-        self.searchFilterString = text;
-        
-    }];
-    
-    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIKeyboardWillShowNotification object:nil] subscribeNext:^(id x) {
+- (void)setupMainSearchBar
+{
+	[[self.mainSearchBar rac_textSignal] subscribeNext: ^(NSString *text) {
+	    self.searchFilterString = text;
+	}];
 
-        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tabScreenAction)];
-        [self.view addGestureRecognizer:tapGesture];
-        
-    }];
-    
-    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIKeyboardWillHideNotification object:nil] subscribeNext:^(id x) {
-        
-        for (UIGestureRecognizer *eachGesture in self.view.gestureRecognizers) {
-            [self.view removeGestureRecognizer:eachGesture];
-        }
-        
-    }];
-    
-    [RACObserve(self, searchFilterString) subscribeNext:^(id x) {
-        
-        [self.mainTableView reloadData];
-        
-    }];
-    
+    __block UITapGestureRecognizer *tapGesture;
+    @weakify(self);
+	[[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIKeyboardWillShowNotification object:nil] subscribeNext: ^(id x) {
+        @strongify(self);
+	    tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tabScreenAction)];
+	    [self.view addGestureRecognizer:tapGesture];
+	}];
+
+	[[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIKeyboardWillHideNotification object:nil] subscribeNext: ^(id x) {
+        @strongify(self);
+        [self.view removeGestureRecognizer:tapGesture];
+	}];
+
+	[RACObserve(self, searchFilterString) subscribeNext: ^(id x) {
+        @strongify(self);
+	    [self.mainTableView reloadData];
+	}];
 }
 
-
--(void) tabScreenAction {
-    
-    if ([self.mainSearchBar isFirstResponder]) {
-        [self.mainSearchBar resignFirstResponder];
-    }
-    
+- (void)tabScreenAction
+{
+	if ([self.mainSearchBar isFirstResponder]) {
+		[self.mainSearchBar resignFirstResponder];
+	}
 }
 
 #pragma mark - life cycle
 
--(void) viewDidLoad {
-    [super viewDidLoad];
-    
-    [self.navigationController.navigationBar setTranslucent:NO];
-    [self setTitle:@"AddressBook"];
-    [self.mainTableView registerClass:[MainCell class] forCellReuseIdentifier:@"MainCell"];
-    
-    [self setupNavigationRightButton];
-    [self setupMainSearchBar];
-    
+- (void)viewDidLoad
+{
+	[super viewDidLoad];
+    self.navigationController.navigationBar.translucent = NO;
+    self.title = @"AddressBook";
+	[self.mainTableView registerClass:[MainCell class] forCellReuseIdentifier:@"MainCell"];
+	[self setupNavigationRightButton];
+	[self setupMainSearchBar];
 }
 
--(void) viewWillAppear : (BOOL) animated {
-    [super viewWillAppear:animated];
-    
-    [self.mainTableView reloadData];
+- (void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+	[self.mainTableView reloadData];
 }
 
 @end
